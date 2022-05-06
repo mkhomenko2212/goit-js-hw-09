@@ -162,7 +162,7 @@ form.addEventListener("submit", event => {
   const amount = parseInt(data.get("amount"));
 
   for (let i = 0; i < amount; i++) {
-    createPromise(2, 1500).then(({
+    createPromise(i, delay + step * i).then(({
       position,
       delay
     }) => {
